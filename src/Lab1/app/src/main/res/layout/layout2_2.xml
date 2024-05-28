@@ -66,7 +66,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
-            android:backgroundTint="@color/colorPrimaryLight"
+            android:backgroundTint="#1B2637"
             android:text="LOG IN"
             android:textColor="@color/colorAccent"
             app:cornerRadius="0dp"

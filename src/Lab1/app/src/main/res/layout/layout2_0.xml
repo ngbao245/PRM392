@@ -52,7 +52,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/rectangle_background"
-        android:backgroundTint="#858585"
+        android:backgroundTint="#B8B8B8"
         android:text="SIGN IN"
         android:textColor="@color/black" />
 
