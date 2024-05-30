@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.lab4_1.Adapter.DrinkAdapter;
 import com.example.lab4_1.Entities.Drink;
@@ -19,6 +22,8 @@ public class ordering_drink extends AppCompatActivity {
     ListView lvDrink;
     ArrayList<Drink> drinkArrayList;
     DrinkAdapter adapter;
+    Drink selectedDrink;
+    AppCompatButton btnOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,14 @@ public class ordering_drink extends AppCompatActivity {
         lvDrink.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Drink selectedDrink = drinkArrayList.get(position);
+                selectedDrink = drinkArrayList.get(position);
+            }
+        });
+
+        btnOrder = (AppCompatButton) findViewById(R.id.button);
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 String currentSummary = getIntent().getStringExtra("OrderSummary");
                 if (currentSummary == null) {
                     currentSummary = "";

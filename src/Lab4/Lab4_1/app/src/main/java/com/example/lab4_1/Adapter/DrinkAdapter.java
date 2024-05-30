@@ -20,6 +20,7 @@ public class DrinkAdapter extends BaseAdapter {
     private int layout;
     private List<Drink> drinkList;
     private DecimalFormat decimalFormat;
+    private int selectedPosition = -1;
 
     public DrinkAdapter(Context context, int layout, List<Drink> drinkList) {
         this.context = context;
@@ -65,7 +66,18 @@ public class DrinkAdapter extends BaseAdapter {
         holder.tvCost.setText(String.format("%s VND", decimalFormat.format(drink.getMoney())));
         holder.imgDrink.setImageResource(drink.getImage());
 
+        if (position == selectedPosition) {
+            view.setBackgroundColor(context.getResources().getColor(R.color.selectedDrink));
+        } else {
+            view.setBackgroundColor(context.getResources().getColor(android.R.color.transparent));
+        }
+
         return view;
+    }
+
+    public void setSelectedPosition(int position) {
+        this.selectedPosition = position;
+        notifyDataSetChanged();
     }
 
     private static class ViewHolder {

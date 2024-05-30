@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.lab4_1.Adapter.FoodAdapter;
+import com.example.lab4_1.Entities.Drink;
 import com.example.lab4_1.Entities.Food;
 
 import java.io.Serializable;
@@ -22,7 +25,8 @@ public class ordering_food extends AppCompatActivity {
     ListView lvFood;
     ArrayList<Food> foodArrayList;
     FoodAdapter adapter;
-
+    Food selectedFood;
+    AppCompatButton btnOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,14 @@ public class ordering_food extends AppCompatActivity {
         lvFood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Food selectedFood = foodArrayList.get(position);
+                selectedFood = foodArrayList.get(position);
+            }
+        });
+
+        btnOrder = (AppCompatButton) findViewById(R.id.button);
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 String currentSummary = getIntent().getStringExtra("OrderSummary");
                 if (currentSummary == null) {
                     currentSummary = "";
