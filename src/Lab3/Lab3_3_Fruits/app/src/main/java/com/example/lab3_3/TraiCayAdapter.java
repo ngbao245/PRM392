@@ -51,14 +51,14 @@ public class TraiCayAdapter extends BaseAdapter {
         TraiCay traiCay = traiCayList.get(position);
         txtTen.setText(traiCay.getTen());
         txtMota.setText(traiCay.getMota());
-        if (traiCay.getHinh() != 0) {
-            imageHinh.setImageResource(traiCay.getHinh());
-        } else {
-            String imageUrl = traiCay.getURLHinh();
-            Picasso.get()
-                    .load(imageUrl)
-                    .into(imageHinh);
-        }
+            if (traiCay.getHinh() != 0) {
+                imageHinh.setImageResource(traiCay.getHinh());
+            } else {
+                String imageUrl = traiCay.getURLHinh();
+                Picasso.get()
+                        .load(imageUrl)
+                        .into(imageHinh);
+            }
         return convertView;
     }
 }
