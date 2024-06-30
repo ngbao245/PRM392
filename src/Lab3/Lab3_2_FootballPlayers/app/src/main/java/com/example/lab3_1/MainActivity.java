@@ -156,7 +156,5 @@ public class MainActivity extends AppCompatActivity {
         memberInfoArrayList.add(new MemberInfo("Franz Beckenbauer", "October 23, 1940 (age 72)", R.drawable.beckenbauer, R.drawable.beckenbauerflag));
         memberInfoArrayList.add(new MemberInfo("Michel Platini", "October 23, 1940 (age 72)", R.drawable.platiini, R.drawable.platiniflag));
         memberInfoArrayList.add(new MemberInfo("Ronaldo De Lima", "October 23, 1940 (age 72)", R.drawable.ronaldodelima, R.drawable.peleflag));
-
     }
-
 }

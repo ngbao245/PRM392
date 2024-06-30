@@ -82,6 +82,4 @@ public class MemberInfoAdapter extends BaseAdapter {
 
         return convertView;
     }
-
-
 }

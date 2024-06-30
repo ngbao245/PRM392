@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569300594255",
+    "project_id": "lab8notification",
+    "storage_bucket": "lab8notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569300594255:android:6e78eca86b65184526443a",
+        "android_client_info": {
+          "package_name": "com.example.firebasenotification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwjOwQKAeKryYuWtV8xWGqrUSbuIDK3Vw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mSearch"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/mFind"
+        android:title="Find" />
+    <item
+        android:id="@+id/mExit"
+        android:title="Exit" />
+</menu>

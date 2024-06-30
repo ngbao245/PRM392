@@ -12,9 +12,9 @@
         android:layout_width="74dp"
         android:layout_height="43dp"
         android:layout_marginTop="44dp"
+        android:gravity="center"
         android:text="Min:"
         android:textSize="20dp"
-        android:gravity="center"
         app:layout_constraintEnd_toStartOf="@+id/minNumber"
         app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +24,10 @@
         android:id="@+id/title"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:text="True Random Number Generator"
-        android:textColor="@color/black"
         android:background="#CCCCFF"
+        android:text="True Random Number Generator"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +38,9 @@
         android:layout_width="74dp"
         android:layout_height="43dp"
         android:layout_marginTop="36dp"
+        android:gravity="center"
         android:text="Max:"
         android:textSize="20dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/maxNumber"
         app:layout_constraintHorizontal_bias="0.367"
@@ -95,13 +95,52 @@
         android:layout_width="305dp"
         android:layout_height="64dp"
         android:layout_marginTop="20dp"
-        android:gravity="center"
         android:text="Result: "
-        android:textAlignment="textStart"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGenerate" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnLab21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Lab2_1" />
+
+        <Button
+            android:id="@+id/btnLab22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Lab2_2" />
+
+        <Button
+            android:id="@+id/btnLab23"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Lab2_3" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
